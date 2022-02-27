@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+body{
+    text-align: center;
+    margin: 0px;
+}
+
+/* Styling for flip-container */
+#flip-container {
+    font-family: 'Bangers', cursive;
+
+    /* make all text capital */
+    text-transform: uppercase;
+
+    /* font size */
+    font-size: 30px;
+
+    /* color */
+    color: white;
+
+    /* width */
+    width: 100%;
+
+    /* height: */
+    height: 100vh;
+
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* background */
+    background-image: url(./Marvel.jpg)  ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Styling for flip */
+#flip {
+    /* fixed height */
+    height: 50px;
+
+    overflow: hidden;
+}
+
+/* Styling for the actual text */
+#flip > div > div {
+    /* padding */
+    padding-bottom: 4px;
+    padding-top: 4px;
+
+    padding-left: 12px;
+    padding-right: 12px;
+
+    /* margin */
+    margin-bottom: 40px ;
+
+    /* height */
+    height: 50px;
+
+    display: inline-block;
+
+    color: white;
+
+} 
+
+#flip div:first-child {
+    animation: flipAnimation 5s linear infinite
+}
+
+#flip div div {
+    background-color: rgb(0, 0, 0);
+}
+
+#flip div:first-child div {
+    background-color: rgb(15, 73, 28);
+}
+
+#flip div:last-child div {
+    background-color: maroon;
+
+}
+
+
+/* Styling for animations using @keyframes */
+@keyframes flipAnimation {
+    0%{
+        margin-top: -270px;
+    }
+
+    5% {
+        margin-top:-180px;
+    }
+
+    33% {
+      margin-top:-180px;
+    }
+
+    38% {
+      margin-top:-90px;
+    }
+
+    66% {
+        margin-top:-90px;
+    }
+
+    71% {
+        margin-top:0px;
+    }
+
+    99.99% {
+        margin-top:0px;
+    }
+
+    100%{
+        margin-top: -270px;
+    }
+}
